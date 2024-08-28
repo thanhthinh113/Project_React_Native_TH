@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        /*Coding Challenge #1*/
+
+        // Data 1
+        let mark_weight_1 = 78
+        let mark_height_1 = 1.69
+        let john_weight_1 = 92
+        let john_height_1 = 1.95
+
+        // Data 2
+        let mark_weight_2 = 95
+        let mark_height_2 = 1.88
+        let john_weight_2 = 85
+        let john_height_2 = 1.76
+
+        let mark_bmi_1 = (mark_weight_1 / (mark_height_1 ** 2)).toFixed(1)
+        let john_bmi_1 = (john_weight_1 / (john_height_1 ** 2)).toFixed(1)
+
+        let mark_bmi_2 = (mark_weight_2 / (mark_height_2 ** 2)).toFixed(1)
+        let john_bmi_2 = (john_weight_2 / (john_height_2 ** 2)).toFixed(1)
+
+        markHigherBMI_1 = mark_bmi_1 > john_bmi_1
+        markHigherBMI_2 = mark_bmi_2 > john_bmi_2
+
+        console.log("Data 1 - Mark BMI:", mark_bmi_1)
+        console.log("Data 1 - John BMI:", john_bmi_1)
+        console.log("Data 1 - Mark có chỉ số BMI cao hơn John không?", markHigherBMI_1)
+
+        console.log("\nData 2 - Mark BMI:", mark_bmi_2)
+        console.log("Data 2 - John BMI:", john_bmi_2)
+        console.log("Data 2 - Mark có chỉ số BMI cao hơn John không?", markHigherBMI_2)
+
+        /**/
+
+        /*Coding Challenge #2*/
+
+        if (mark_bmi_1 > john_bmi_1)
+            console.log("Chỉ số BMI của Mark_1 " + mark_bmi_1 + "cao hơn John_1 " + john_bmi_1)
+        else
+            console.log("Chỉ số BMI của John_1 " + mark_bmi_1 + "cao hơn Mark_1 " + john_bmi_1)
+
+        if (mark_bmi_2 > john_bmi_2)
+            console.log("Chỉ số BMI của Mark_2 " + mark_bmi_2 + "cao hơn John_2 " + john_bmi_2)
+        else
+            console.log("Chỉ số BMI của John_2 " + mark_bmi_2 + "cao hơn Mark_2 " + john_bmi_2)
+
+        /**/
+
+        /*Coding Challenge #3*/
+
+        function calculateAverage(x1, x2, x3) {
+            return (x1 + x2 + x3) / 3
+        }
+
+        let dolphinsAvg = calculateAverage(96, 108, 89).toFixed(1)
+        let koalasAvg = calculateAverage(88, 91, 110).toFixed(1)
+
+        console.log("Điểm trung bình của đội Dolphins: " + dolphinsAvg)
+        console.log("Điểm trung bình của đội Koalas: " + koalasAvg)
+
+        if (dolphinsAvg > koalasAvg)
+            console.log("Điểm trung bình của đội Dolphins lớn hơn đội Koalas!")
+        else if (dolphinsAvg < koalasAvg)
+            console.log("Điểm trung bình của đội Koalas lớn hơn đội Dolphins!")
+        else
+            console.log("Hai đội hòa nhau!")
+
+
+        let bonus1_dolphinsAvg = calculateAverage(97, 112, 101).toFixed(3)
+        let bonus1_koalasAvg = calculateAverage(109, 95, 123).toFixed(3)
+
+        console.log("Điểm trung bình của đội Bonus1_Dolphins: " + bonus1_dolphinsAvg)
+        console.log("Điểm trung bình của đội Bonus1_Koalas: " + bonus1_dolphinsAvg)
+
+        if ((bonus1_dolphinsAvg > bonus1_koalasAvg) && bonus1_dolphinsAvg >= 100)
+            console.log("Điểm trung bình của đội Bonus1_Dolphins chiến thắng!")
+        else if ((bonus1_dolphinsAvg < bonus1_koalasAvg) && bonus1_koalasAvg >= 100)
+            console.log("Điểm trung bình của đội Bonus1_Koalas chiến thắng!")
+        else if ((bonus1_dolphinsAvg == bonus1_koalasAvg) && bonus1_dolphinsAvg >= 100 && bonus1_koalasAvg >= 100)
+            console.log("Hai đội hòa nhau!")
+        else
+            console.log("Không có đội nào thỏa yêu cầu!")
+
+        let bonus2_dolphinsAvg = calculateAverage(97, 112, 101).toFixed(3)
+        let bonus2_koalasAvg = calculateAverage(109, 95, 106).toFixed(3)
+
+        console.log("Điểm trung bình của đội Bonus2_Dolphins: " + bonus2_dolphinsAvg)
+        console.log("Điểm trung bình của đội Bonus2_Koalas: " + bonus2_dolphinsAvg)
+
+        if ((bonus2_dolphinsAvg > bonus2_koalasAvg) && bonus2_dolphinsAvg >= 100)
+            console.log("Điểm trung bình của đội Bonus2_Dolphins chiến thắng!")
+        else if ((bonus2_dolphinsAvg < bonus2_koalasAvg) && bonus2_koalasAvg >= 100)
+            console.log("Điểm trung bình của đội Bonus2_Koalas chiến thắng!")
+        else if ((bonus2_dolphinsAvg == bonus2_koalasAvg) && bonus2_dolphinsAvg >= 100 && bonus2_koalasAvg >= 100)
+            console.log("Hai đội hòa nhau!")
+        else
+            console.log("Không có đội nào thỏa yêu cầu!")
+
+        /**/
+
+        /*Coding Challenge 4*/
+
+        let bill1=275
+        let bill2=40
+        let bill3=430
+
+        let tip=(bill1>=50 && bill1<=300)?bill1*0.15:bill1*0.20
+
+        console.log("Hoá đơn là: "+bill1+"Số tiền tip của bill1: "+tip+" Tổng số tiền phải trả: "+(bill1+tip))
+        console.log("Hoá đơn là: "+bill2+"Số tiền tip của bill2: "+tip+" Tổng số tiền phải trả: "+(bill2+tip))
+        console.log("Hoá đơn là: "+bill3+"Số tiền tip của bill3: "+tip+" Tổng số tiền phải trả: "+(bill3+tip))
+
+        /**/
+
+
+        /*JavaScript Fundamentals – Part 2*/
+
+        /*Coding Challenge #1*/
+
+        function calcAverage(x1, x2, x3) {
+            return (x1 + x2 + x3) / 3
+        }
+        let dolphinsAvg1 = calcAverage(44, 23, 71).toFixed(1)
+        let koalasAvg1 = calcAverage(63, 54, 49).toFixed(1)
+
+        let dolphinsAvg2 = calcAverage(85, 54, 41).toFixed(1)
+        let koalasAvg2 = calcAverage(23, 34, 27).toFixed(1)
+
+        function checkWinner(avgDolphins, avgKoalas) {
+            if (avgDolphins >= 2 * avgKoalas)
+                return "Dolphins win 🏆"+"("+avgDolphins+" vs. "+avgKoalas+")"
+            else if (avgKoalas >= 2 * avgDolphins)
+                return "Koalas win 🏆"+"("+avgKoalas+" vs. "+avgDolphins+")"
+            else
+                return "No team wins..."
+        }
+        console.log(checkWinner(dolphinsAvg1, koalasAvg1));
+        console.log(checkWinner(dolphinsAvg2, koalasAvg2));
+        
+        /**/
+
+        /*Coding Challenge #2*/
+
+        function calcTip(bill) {
+            return (bill >= 50 && bill <= 300) ? bill * 0.15 : bill * 0.20
+        }
+
+        let bills = [125, 555, 44]
+
+        let tips = [calcTip(bills[0]), calcTip(bills[1]), calcTip(bills[2])]
+
+        let total = [bills[0] + tips[0], bills[1] + tips[1], bills[2] + tips[2]]
+
+        console.log("Bills: ", bills)
+        console.log("Tips: ", tips)
+        console.log("Total: ", total)
+
+        /**/
+
+    </script>
+</head>
+
+<body>
+
+
+</body>
+
+</html>
